@@ -1,3 +1,7 @@
+REM the following works for networked drives with spaces!!!
+REM Net use p: "\\myNetwork\HPS Classes$\computer programming 2011\Assignments" /persistent:no
+
+
 REM dir/x gives the short file names.
 REM you need to get these paths correct for nodejs, ARM, spark-cli, dfu files
 REM NPM_PATH and SparkCLI_PATH may be the same or different.

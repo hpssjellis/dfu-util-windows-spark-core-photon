@@ -10,4 +10,8 @@ Hope to have something working within a few weeks
 
 Note the spark core binaries are at 
 
+https://github.com/spark/firmware/releases
+
+DFU binaries and util are at
+
 http://dfu-util.sourceforge.net/releases/dfu-util-0.8-binaries/

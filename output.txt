@@ -1,0 +1,102 @@
+"*************************************"  
+"PATH"                                  
+"*************************************" 
+"*************************************" 
+"*************************************" 
+"node --version"                        
+"*************************************" 
+v0.10.28
+"*************************************" 
+"*************************************" 
+"arm-none-eabi-gcc --version"           
+"*************************************" 
+arm-none-eabi-gcc (GNU Tools for ARM Embedded Processors) 4.9.3 20141119 (release) [ARM/embedded-4_9-branch revision 218278]
+Copyright (C) 2014 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+"*************************************" 
+"*************************************" 
+"dfu-util -l"                           
+"*************************************" 
+dfu-util 0.8
+
+Copyright 2005-2009 Weston Schmidt, Harald Welte and OpenMoko Inc.
+Copyright 2010-2014 Tormod Volden and Stefan Schmidt
+This program is Free Software and has ABSOLUTELY NO WARRANTY
+Please report bugs to dfu-util@lists.gnumonks.org
+
+Found DFU: [1d50:607f] ver=0200, devnum=13, cfg=1, intf=0, alt=1, name="@SPI Flash : SST25x/0x00000000/512*04Kg", serial="8D8E479D5355"
+Found DFU: [1d50:607f] ver=0200, devnum=13, cfg=1, intf=0, alt=0, name="@Internal Flash  /0x08000000/20*001Ka,108*001Kg", serial="8D8E479D5355"
+Cannot open DFU device 0a5c:21fb
+"*************************************" 
+"*************************************" 
+"spark flash --usb spkbin\core-firmware.bin"  
+"*************************************" 
+FOUND DFU DEVICE 1d50:607f
+checking file  core-firmware.bin
+spawning dfu-util -d 1d50:607f -a 0 -i 0 -s 0x08005000:leave -D core-firmware.bin
+dfu-util 0.8
+
+Copyright 2005-2009 Weston Schmidt, Harald Welte and OpenMoko Inc.
+Copyright 2010-2014 Tormod Volden and Stefan Schmidt
+This program is Free Software and has ABSOLUTELY NO WARRANTY
+Please report bugs to dfu-util@lists.gnumonks.org
+
+Opening DFU capable USB device...
+ID 1d50:607f
+Run-time device DFU version 011a
+Claiming USB DFU Interface...
+Setting Alternate Setting #0 ...
+Determining device status: state = dfuERROR, status = 10
+dfuERROR, clearing status
+Determining device status: state = dfuIDLE, status = 0
+dfuIDLE, continuing
+DFU mode device DFU version 011a
+Device returned transfer size 1024
+DfuSe interface name: "Internal Flash  "
+Downloading to address = 0x08005000, size = 79996
+
+Download	[                         ]   0%            0 bytes
+Download	[=                        ]   5%         4096 bytes
+Download	[=                        ]   6%         5120 bytes
+Download	[==                       ]   8%         7168 bytes
+Download	[===                      ]  12%        10240 bytes
+Download	[===                      ]  14%        11264 bytes
+Download	[====                     ]  16%        13312 bytes
+Download	[=====                    ]  20%        16384 bytes
+Download	[=====                    ]  21%        17408 bytes
+Download	[======                   ]  24%        19456 bytes
+Download	[=======                  ]  28%        22528 bytes
+Download	[=======                  ]  30%        24576 bytes
+Download	[========                 ]  32%        25600 bytes
+Download	[=========                ]  37%        29696 bytes
+Download	[=========                ]  38%        30720 bytes
+Download	[==========               ]  40%        32768 bytes
+Download	[===========              ]  44%        35840 bytes
+Download	[===========              ]  46%        36864 bytes
+Download	[============             ]  48%        38912 bytes
+Download	[=============            ]  52%        41984 bytes
+Download	[=============            ]  55%        44032 bytes
+Download	[==============           ]  56%        45056 bytes
+Download	[===============          ]  60%        48128 bytes
+Download	[===============          ]  62%        50176 bytes
+Download	[================         ]  64%        51200 bytes
+Download	[=================        ]  69%        55296 bytes
+Download	[=================        ]  70%        56320 bytes
+Download	[==================       ]  72%        58368 bytes
+Download	[===================      ]  76%        61440 bytes
+Download	[===================      ]  79%        63488 bytes
+Download	[====================     ]  80%        64512 bytes
+Download	[=====================    ]  84%        67584 bytes
+Download	[=====================    ]  87%        69632 bytes
+Download	[======================   ]  88%        70656 bytes
+Download	[=======================  ]  92%        73728 bytes
+Download	[======================== ]  96%        76800 bytes
+Download	[=========================] 100%        79996 bytes
+Download done.
+File downloaded successfully
+Transitioning to dfuMANIFEST state
+Invalid DFU suffix signature
+A valid DFU suffix will be required in a future dfu-util release!!!
+Flashed!
